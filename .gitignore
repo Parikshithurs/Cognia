@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+dist/
+.vite/
+
+# Python virtual environment (used by node-gyp for native packages)
+.venv/
+
+# Runtime
+cognia.db
+*.db-shm
+*.db-wal
+
+# Environment
+.env
+*.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
