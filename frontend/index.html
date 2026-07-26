@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognia — ADHD Focus Companion</title>
+  <meta name="description" content="Cognia helps people with ADHD stay focused through camera-assisted micro-sessions, smart task management, and real-time distraction alerts." />
+  <meta name="theme-color" content="#0a0b1a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Firebase SDK (compat version for easy use) -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+
+  <!-- MediaPipe Face Mesh -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/reset.css" />
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+  <link rel="stylesheet" href="/src/styles/animations.css" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Loading screen shown while Firebase auth initialises -->
+    <div id="app-loader" class="app-loader">
+      <div class="loader-brain">
+        <div class="brain-ring ring-1"></div>
+        <div class="brain-ring ring-2"></div>
+        <div class="brain-ring ring-3"></div>
+        <span class="loader-icon">🧠</span>
+      </div>
+      <p class="loader-text">Loading Cognia…</p>
+    </div>
+  </div>
+
+  <!-- Toast container (outside #app so it stays on top) -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
