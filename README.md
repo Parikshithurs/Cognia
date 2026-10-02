@@ -27,7 +27,7 @@ Cognia is an intelligent, real-time focus management and productivity applicatio
 
 - 🔒 **Secure Authentication & Data Isolation**
   - Integrated with **Firebase Auth** for secure user login and token verification.
-  - Backend protected via Firebase Admin token verification middleware.
+  - Backend protected via Firebase Admin token verification middlewares.
 
 ---
 
